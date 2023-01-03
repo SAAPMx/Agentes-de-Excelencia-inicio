@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agentes de Excelencia</title>
+
+    <!--Vinculación con el archivo normalize.css-->
+    <link rel="preload" href="css/normalize.css" as="style" >
+    <link rel="stylesheet" href="css/normalize.css"> <!--Por su importancia, debe ser el primer archivo en cargar-->
+
+
+
+   <!--Enlace para la API de Google Fonts-->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"> -->
+   <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Lato:wght@300&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Libre+Baskerville&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+   <link rel="icon" href="/img/agentescfst.png"> <!--ÍCONO DE LA PÁGINA-->
+
+   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/flatly/bootstrap.min.css" integrity="sha384-qF/QmIAj5ZaYFAeQcrQ6bfVMAh4zZlrGwTPY7T/M+iTTLJqJBJjwwnsE5Y0mV7QK" crossorigin="anonymous"> -->
+
+   <!--Vinculación del HTML a la hoja de estilos-->
+   <link rel="preload" href="css/styles.css" as="style" >
+   <link href="css/styles.css" rel="stylesheet">
+   <!--La hoja de estilos personalizada debe ser la última en agregarse-->
+
+</head>
+<body>
+    <header> <!-- HEADER-->
+        <div class="navegador-superior">
+            <nav class="black-nav-bar">
+                <a href="https://www.up.edu.mx/">Universidad Panamericana</a>
+                <p>|</p>
+                <a href="">Agentes de Excelencia</a>
+                <p>|</p>
+                <a href="">Dirección de Operaciones</a>
+            </nav>
+        </div>
+        <div class="separador-navegador"></div>
+
+        <div class="navegador-inferior">
+            <div class="logo-izquierda">
+                <a href="index.html"></a>
+            </div>
+            <div class="main-links">
+                <div class="main-links-part">
+                    <nav class="main-links-nav">
+                        <!-- <a href="">Sobre la universidad</a> -->
+                        <a href="" class="active-modal2">Nuevo Reporte</a>
+                        <a href="https://www.up.edu.mx/vida-panamericana-centros/">Vida Panamericana</a>
+                        <a href="">Noticias</a>
+                    </nav>
+                </div>
+            </div>
+            
+            <div class="inferior-derecha">
+                <a href="index.html"></a>
+            </div>
+        </div>
+    </header> <!--END OF HEADER-->
+    
+
+    <main class="container-flex">
+        <hr>
+        <div class="reception" >
+            <p class="subtitle-reception">Agentes de Excelencia</p>
+            <h1>Hola, soy un <a class="reception-a active-modal" href=""> Agente de Excelencia </a>y quiero hacer un reporte</h1>
+        </div>
+
+
+        <section class="modal "> <!--VENTANA PARA MODAL REPORTE  -->
+            <div class="modal__container">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-square-x modal_x" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <rect x="4" y="4" width="16" height="16" rx="2" />
+                    <path d="M10 10l4 4m0 -4l-4 4" /> <!--IMAGEN DE X PARA CERRAR VENTANA-->
+                </svg>
+
+                <h2 class="modal__title">Reporte de Mejora</h2>
+
+                <form action="" class="column-drop-css formulario" id="ext-form">
+                    <div >
+                        <div> <!-- Este no tiene class="entrada-modal" por ser la primera-->
+                            <label for="mail" >Correo del Agente:</label>
+                            <div>
+                                <input 
+                                    type="text"
+                                    id="agt-id"
+                                    class="servicio__textarea input-modal"
+                                    placeholder="Correo institucional "
+                                    autofocus
+                                    required
+                                />
+                            </div>
+                        </div>
+
+                        <div class="entrada-modal">
+                            <label for="mail">Ubicación del reporte:</label>
+                            <div>
+                                <!-- <input 
+                                    type="text"
+                                    id="agt-ubi"
+                                    class="form-control mb-3 servicio__textarea input-modal"
+                                    placeholder="¿Dónde hay problemas o posibles mejoras?"
+                                    required
+                                /> -->
+                                <select id="agt-predio" required>
+                                    <option disabled selected> --Seleccione un Predio-- </option>
+                                    <option value="Anexo-507">Anexo 507</option>
+                                    <option value="Campana-91">Campana 91</option>
+                                    <option value="Campana-95">Campana 95</option>
+                                    <option value="Casco-Antiguo">Casco Antiguo</option>
+                                    <option value="Centro-de-Simulación">Centro de Simulación</option>
+                                    <option value="Chancellor">Chancellor</option>
+                                    <option value="Chocolatera">Donatello 59, Chocolatera</option>
+                                    <option value="Donatello-79">Donatello 79</option>
+                                    <option value="Extremadura-100">Extremadura 100</option>
+                                    <option value="Goya-49">Goya 49</option>
+                                    <option value="Jardín-Central">Jardín Central</option>
+                                    <option value="Jerez-10">Jerez 10</option>
+                                    <option value="Jerez-20">Jerez 20</option>
+                                    <option value="Jerez-42">Jerez 42</option>
+                                    <option value="Málaga">Málaga</option>
+                                    <option value="Periquillo">Periquillo</option>
+                                    <option value="Rodin-451">Rodin 451</option>
+                                    <option value="Rodin-460">Rodin 460</option>
+                                    <option value="Valencia-101">Valencia 101</option>
+                                    <option value="Valencia-102">Valencia 102</option>
+                                    <option value="Valenia-36">Valenia 36</option>
+
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="entrada-modal"> 
+                            <label for="adt-refe" >Detalles de la Ubicación</label>
+                            <div>
+                                <input 
+                                    type="text"
+                                    id="agt-id"
+                                    class="servicio__textarea input-modal"
+                                    placeholder="Ej. Oficina del director de Derecho"
+                                    autofocus
+                                    required
+                                />
+                            </div>
+                        </div>
+
+                    </div>
+
+                    
+                    <div>
+                        <div> <!-- Este no tiene class="entrada-modal" por ser la primera-->
+                            <label for="contact">Celular:</label>
+                            <div>
+                                <input 
+                                    type="tel"
+                                    id="agt-cel"
+                                    class="servicio__textarea input-modal"
+                                    placeholder="Permítenos contactarte"
+                                    required
+                                />
+                            </div>
+                        </div>
+
+                        <div class="entrada-modal">
+                            <label>Fotografía (Opcional):</label>
+                                        <input 
+                                            type="file"
+                                            id="agt-photo"
+                                            class="servicio__textarea input-modal"
+                                            accept=""
+                                            multiple
+                                        />
+                        </div>
+                    </div>
+
+                    <label for="description" class="uno-3-drop">Descripción:</label>
+                    <textarea
+                        id="agt-descripcion"
+                        rows="3"
+                        class="form-control mb-3 servicio__textarea uno-3-drop"
+                        placeholder="Descripción de la situación o retroalimentación"
+                        required
+                    ></textarea>
+    
+                    <h3>Le mantendremos al tanto de cualquier noticia.</h3>
+    
+                    <button class="boton uno-3-drop" id="btn-agt-form" >
+                        Enviar
+                    </button>
+                </form>
+            </div>
+        </section>
+
+
+
+        <div class="menu-lat">
+            <div class="v-line"></div>
+            <div class="bloque-menu">
+                <p class="subtitle-reception">Lo más buscado</p>
+                <div class="menu-lat-option">
+                    <label for="">01</label>
+                    <a href="">Servicios Generales</a>
+                </div>
+                <div class="menu-lat-option">
+                    <label for="">02</label>
+                    <a href="">Mensajería UP</a>
+                </div>
+                <div class="menu-lat-option">
+                    <label for="">03</label>
+                    <a href="">Reservación de Espacios</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <main class="container-grid">
+        <div class="img-publicidad"></div>
+
+        <div class="fondo-lat">
+            <div class="text-lat">
+                <h1 class="titles">Existimos para ti</h1>
+                <p>Por | Dirección de Operaciones</p>
+            </div>
+        </div>
+            
+    </main>
+    
+
+    <script src='js/script.js'></script>
+</body>
+
+<footer class="footer">
+    <main class="container-footer">
+        <div class="footer1">
+            <div>
+                <img src="img/logo-up-alargado.png" alt="Universidad Panamericana" >
+            </div>
+            <div>
+                <hr>
+                <p>© 2022 Servicio AAP </p>
+            </div>
+        </div>
+        <div class="footer2">
+            <nav class="footer-nav-bar">
+                <a href="https://www.up.edu.mx/legales-terminos/">Términos y condiciones</a>
+                <p>|</p>
+                <a href="https://www.up.edu.mx/legales-politicas/">Política de Privacidad</a>
+                <p>|</p>
+                <a href="https://www.up.edu.mx/wp-content/uploads/2022/07/reglamento_general_agosto_2020_registro_sep.pdf">Reglamento General</a>
+            </nav>
+        </div>
+    </main>
+</footer>
+</html>
